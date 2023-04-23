@@ -1,0 +1,18 @@
+.popup-content-chrome-addlist{
+    padding-inline: 16px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: scroll;
+    height: 335px;
+}
+.popup-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}

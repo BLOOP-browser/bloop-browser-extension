@@ -1,0 +1,22 @@
+.ListTitleField{
+ width: 99%;
+ font-size: 13px;
+ background: rgba(128, 128, 128, 0.1);
+ border-bottom: solid;
+ border-color:rgba(128, 128, 128, 0.674);
+ border-width: 1px;
+ border-top: none;
+ border-left: none;
+ border-right: none;
+}
+.descriptionTitleField{
+    width: 99%;
+    height: 35px;
+    font-size: 11px;
+    background: rgba(128, 128, 128, 0.1);
+    border: none;
+}
+
+.starredContainer{
+    position: relative;
+}

@@ -1,0 +1,109 @@
+* {
+  font-family: sans-serif;
+}
+
+.tinysubtitle{
+  font-size: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 95px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 18rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.loginlabel {
+  display: block;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 14px;
+  opacity: 70%;
+}
+
+input[type="email"] {
+  width: 15rem;
+  padding: 0.5rem;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+
+.loginbutton[type="submit"] {
+  width: 16rem;
+  padding: 0.6rem;
+  font-size: 12px;
+  color: #fff;
+  margin-block: .1rem;
+  background-color: #000000;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.loginbutton :hover {
+  background: linear-gradient(45deg, #394DFF, #9C39FF, #FF9839);
+  background-size: 200% 200%;
+  animation: gradient-animation 2s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button:active{
+  background:#585858;
+}
+
+.logo-container {
+  width: 6rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  form {
+    margin-inline: 2rem;
+  }
+}

@@ -1,0 +1,57 @@
+.inactive-save-button{
+    background: grey;
+    color: white;
+    border-radius: 5px;
+    padding-block: 5px;
+    width: 5rem;
+    border: none;
+    margin-right: 15px;
+}
+
+.save-link-tolist-button{
+    background: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    padding-block: 5px;
+    width: 5rem;
+    border: none;
+    margin-right: 15px;
+}
+
+.newlist-button-chrome{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: calc(-0.5*250px);
+    font-size: .9rem;
+    padding: 5px 15px;
+    width: 250px;
+    font-weight: 500;
+    color: black;
+    border: solid;
+    border-radius: 10px;
+    border-color: grey;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .newlist-button-chrome:hover {
+    color: black;
+    border-color: black;
+  }
+
+  .newlist-button-chrome:active{
+    color: white;
+    background-color: black;
+  }
+
+
+  .popup-content-chrome {
+    padding: 16px;
+    margin-inline: .5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 240px;
+    overflow: scroll;
+  }
