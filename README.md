@@ -1,0 +1,1 @@
+# bloop-beta-chrome-ext
