@@ -68,6 +68,8 @@
 font-weight: 600;
 text-decoration: none;
 color: #1a0dab;
+text-align: left;
+padding-left: 5px;
 }
 .OurSearchResultTitleTest:hover{
   

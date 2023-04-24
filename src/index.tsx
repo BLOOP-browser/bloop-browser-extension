@@ -13,6 +13,7 @@ import Login from './Pages/Login-page/login';
 import AddLinkPage from './Pages/Add-link-page/add-link';
 import AddToListPage from './Pages/Add-to-list-page/add-to-list';
 import AddListPage from './Pages/Add-list-page/add-list-page';
+import SuccessPage from './Pages/Success-page/success-page';
 
 
 const root = ReactDOM.createRoot(
@@ -35,6 +36,7 @@ root.render(
   <Route path="/addlink" element={< AddLinkPage/>} />
   <Route path="/addtolist" element={< AddToListPage/>} />
   <Route path= "/addlist" element ={<AddListPage/>} />
+  <Route path= "/success" element ={<SuccessPage/>} />
 
   </Routes>
   </BrowserRouter>  

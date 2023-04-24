@@ -1,0 +1,34 @@
+.copy-share-div{
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: .3rem;
+    overflow-x: hidden;
+    width: 300px;
+    margin-inline: auto;
+    padding: 3px;
+    cursor: pointer;
+    font-style: none;
+}
+.check-success {
+    margin-inline: auto;
+    margin-bottom: 20px;
+}
+
+.grid-modal-success {
+    margin-top: 2rem;
+    margin-inline: 15px;
+    font-size: 0.9rem;
+    display: grid;
+    text-align: center;
+    max-width: 100%;
+    max-height: calc(60vh);
+    padding-top: 0px;
+    padding-bottom: 5px;
+    background: rgb(255, 255, 255);
+    gap: 10px;
+  }
