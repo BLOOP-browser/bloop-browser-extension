@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./add-link.css";
 import closeicon from "../../Assets/close.svg";
 import nexticon from "../../Assets/next-arrow.svg";
 
-const AddLinkPage= () => {
+interface InitialProps {
+  linkUrlPath: string,
+  handleAddLink: Function
+}
+
+export function AddLinkPage(props: InitialProps) {
+  const [currentUrl, setCurrentURL] = useState<string>(props.linkUrlPath);
+  const [urlDescription, setUrlDescription] = useState<string>("");
+
+  useEffect(() => {
+    if(!currentUrl){
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        console.log(`get url ${tabs[0].url}`);
+        setCurrentURL(tabs[0].url ?? "");
+      });
+    }
+  }, []);
+  
+  function handleSubmit(){
+    console.log("addLink");
+    props.handleAddLink(currentUrl, urlDescription);
+  }
 
 return(
     
     <div className='chrome-ext-window'> 
     <div className='modal-header'>
         <img src= {closeicon}/> 
-        <button className='save-link-button'> Save this URL to list <img src = {nexticon}/></button>
+        <button className='save-link-button' onClick={handleSubmit}> Save this URL to list <img src = {nexticon}/></button>
          </div>
     
     <div className="grid-modal">
@@ -21,7 +42,8 @@ return(
               rows={5}
               className="paragraph-linkdescription"
               placeholder="Comments and #tags"
-              
+              value={urlDescription}
+              onChange={(event) =>  setUrlDescription(event.target.value)}
             />
             
             <input
@@ -29,7 +51,8 @@ return(
               required
               type="url"
               placeholder="https://website.com"
-              
+              value={currentUrl}
+              onChange={(event) =>  setCurrentURL(event.target.value)}
             />
             
           </fieldset>

@@ -51,14 +51,7 @@ input[type="email"] {
   border-radius: 0.25rem;
   text-align: center;
 }
-input[type="password"] {
-  width: 15rem;
-  padding: 0.5rem;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  text-align: center;
-}
+
 
 .loginbutton[type="submit"] {
   width: 16rem;
