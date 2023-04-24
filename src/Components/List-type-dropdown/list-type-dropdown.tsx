@@ -12,9 +12,10 @@ interface DropdownOption {
 
 interface DropdownProps {
   options: DropdownOption[];
+  handleSelectType: Function;
 }
 
-const ListDropdown: React.FC<DropdownProps> = ({ options }) => {
+const ListDropdown: React.FC<DropdownProps> = ({ options, handleSelectType }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<DropdownOption>(
     options[0]
@@ -25,6 +26,7 @@ const ListDropdown: React.FC<DropdownProps> = ({ options }) => {
   const handleOptionClick = (option: DropdownOption) => {
     setSelectedOption(option);
     setIsOpen(false);
+    handleSelectType(option.value);
   };
 
   return (

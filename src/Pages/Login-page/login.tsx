@@ -1,23 +1,42 @@
 import React, { useState } from "react";
 import "./login.css";
 import logo from "./logo.svg";
+import AuthService from "../../services/auth-services";
 
 interface ILoginProps {
-  onLogin: (email: string) => void;
+  onLogin: Function;
 }
 
 const Login: React.FC<ILoginProps> = ({ onLogin }) => {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    onLogin(email);
+  function handleSubmit() {
+    setErrorMessage("");
+    if(!email || !password){
+      setErrorMessage("Invalid email or password");
+      return;
+    }
+    AuthService.signIn(email, password).then((res) => {
+      if(res.data.accessToken){
+        localStorage.setItem("auth", res.data.accessToken);
+        onLogin(res.data.accessToken);
+      }else{
+        setErrorMessage("Internal error, please try to login later")
+      }
+    }).catch((error) => {
+      setErrorMessage("Invalid credentials")
+    })
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
 
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
   return (
     
     <div className="chrome-ext-window">
@@ -25,7 +44,7 @@ const Login: React.FC<ILoginProps> = ({ onLogin }) => {
     <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" />
       </div>
-      <form onSubmit={handleSubmit}>
+      <div className="form">
       <label htmlFor="email" className="loginlabel">Login to start! </label>
         <div className="form-group">
           <input
@@ -37,16 +56,21 @@ const Login: React.FC<ILoginProps> = ({ onLogin }) => {
             onChange={handleEmailChange}
           />
           <input
-            type="email"
+            type="password"
             id="email"
             name="password"
             placeholder="Password"
-            value={email}
-            onChange={handleEmailChange}
+            value={password}
+            onChange={handlePasswordChange}
           />
+          {errorMessage && (
+              <span style={{ color: "red" }} className="email-error">
+                {errorMessage}.
+              </span>
+            )}
         </div>
-        <button className = "loginbutton" type="submit">Login</button>
-      </form>
+        <button className = "loginbutton" type="submit" onClick={handleSubmit}>Login</button>
+        </div>
       
     </div>
     <div className = "tinysubtitle">BLOOP Private Beta 2023</div>

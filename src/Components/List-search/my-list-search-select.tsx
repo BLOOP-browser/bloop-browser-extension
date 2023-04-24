@@ -4,23 +4,24 @@ import myAvatar from "../../Assets/my-avatar.svg";
 import { link } from 'fs';
 
 interface Props {
+  collectionId: number;
   title: string;
   description: string;
   listType: string;
   linksNumber: number;
-  selectHandler: () => void;
+  selectHandler: (collectionId: number) => void;
 }
 
-const SelectMyListSearchResult: React.FC<Props> = ({ title, description, listType,  linksNumber, selectHandler}) => {
+const SelectMyListSearchResult: React.FC<Props> = ({ collectionId, title, description, listType,  linksNumber, selectHandler}) => {
     const [isSelected, setIsSelected] = useState(false);
     const listSelectHandler = () => {
         setIsSelected(!isSelected);
-        selectHandler();
+        selectHandler(collectionId);
     }
 
 
   return (
-    <div className='starredContainer'>
+    <div className='starredContainer' key={collectionId}>
 
     <div className={ isSelected? "selected-list-container":"select-list-container"} onClick={listSelectHandler}>
         <img src = {myAvatar} className='list-avatar'/>
