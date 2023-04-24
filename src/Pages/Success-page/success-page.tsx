@@ -5,6 +5,7 @@ import copyicon from "../../Assets/copy.svg";
 import checkicon from "../../Assets/check.svg";
 import MyListSearchResult from '../../Components/List-search/my-list-search';
 
+
 const SuccessPage= () => {
 
 return(
@@ -23,7 +24,7 @@ return(
 
           <div className='form-description'> You can share this list with this URL: </div>
 
-        <a href= 'https://beta.getbloop.co/user/1/list/3/view' className='copy-share-div'> <img src = {copyicon}/> https://beta.getbloop.co/user/1/list/3/view</a>
+        
 
 
         </div>
