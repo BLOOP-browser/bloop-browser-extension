@@ -1,6 +1,6 @@
 {
-  "name": "Bloop",
-  "description": "Bloop search chrome extension",
+  "name": "BLOOP Search Companion",
+  "description": "Save to BLOOP with this extension",
   "version": "0.0.2",
   "manifest_version": 3,
   "icons": {
@@ -11,7 +11,7 @@
   },
   "action": {
     "default_popup": "index.html",
-    "default_title": "Bloop search",
+    "default_title": "BLOOP Search Companion",
     "default_icon": "logo192.png"
   },
   "permissions": [

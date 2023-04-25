@@ -19,8 +19,8 @@ const LinkAdded: React.FC<ILInkAddedProps> = ({ onLinkAdded }) => {
         <img src={logo} alt="Logo" className="logo" />
       </div>
       <div className="form">
-      <p className="loginlabel">Link Added successfully</p>
-        <button className = "loginbutton" type="submit" onClick={handleSubmit}>Add new Link</button>
+      <p className="loginlabel">Link added successfully! </p>
+        {/* <button className = "loginbutton" type="submit" onClick={handleSubmit}>Add new Link</button> */}
       </div>
       
     </div>

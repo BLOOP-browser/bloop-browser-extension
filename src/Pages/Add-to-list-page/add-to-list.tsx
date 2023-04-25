@@ -58,7 +58,7 @@ return(
           collectionsData.map((item, index) => (
             <SelectMyListSearchResult collectionId={item.id} title={item.title ?? ""} description={item.description ?? ""} listType={item.accessType ?? "publicView"} linksNumber={item.links?.length ?? 0} selectHandler={selectHandler}/>
           )
-          )):<p>No list found please</p>}
+          )):<p>Oops! There's nothing here. </p>}
 
       </div>
 
