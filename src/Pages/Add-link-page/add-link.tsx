@@ -30,7 +30,7 @@ return(
     
     <div className='chrome-ext-window'> 
     <div className='modal-header'>
-        <img src= {closeicon}/> 
+        <img className = "closeicon"src= {closeicon}/> 
         <button className='save-link-button' onClick={handleSubmit}> Save this URL to list <img src = {nexticon}/></button>
          </div>
     

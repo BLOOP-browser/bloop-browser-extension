@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LinkAdded.css";
+import "./linkAdded.css";
 import logo from "./logo.svg";
 
 interface ILInkAddedProps {
