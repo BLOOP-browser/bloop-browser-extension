@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: scroll;
+  overflow: hidden;
   height: 335px;
 }
 .popup-arrow {
@@ -16,17 +16,22 @@
   border-radius: 50%;
   cursor: pointer;
 }
-
+.addListTitle{
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #656465;
+}
 .ListTitleField {
   width: 99%;
   font-size: 13px;
   background: rgba(128, 128, 128, 0.1);
-  border-bottom: solid;
-  border-color: rgba(128, 128, 128, 0.674);
+  border-color: lightgrey;
   border-width: 1px;
   border-top: none;
   border-left: none;
   border-right: none;
+  outline: none;
 }
 .descriptionTitleField {
   width: 99%;
@@ -34,6 +39,8 @@
   font-size: 11px;
   background: rgba(128, 128, 128, 0.1);
   border: none;
+  resize: none;
+  outline: none;
 }
 
 .starredContainer {

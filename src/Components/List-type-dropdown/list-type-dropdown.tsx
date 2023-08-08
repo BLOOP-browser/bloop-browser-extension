@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "./list-type-dropdown.css";
-import privatelist from "../../Assets/private-list-icon.svg";
-import publiclist from "../../Assets/public-list-icon.svg";
-import unlistedlist from "../../Assets/unlisted-icon.svg";
 
 interface DropdownOption {
   value: string;
+  image: string;
   label: string;
   description: string;
 }
@@ -43,9 +41,11 @@ const ListDropdown: React.FC<DropdownProps> = ({ options, handleSelectType }) =>
               className="dropdown-option"
               onClick={() => handleOptionClick(option)}
             >
-              <div className="dropdown-option-label">{option.label}</div>
+              <img src={option.image} className="dropdown-option-image" alt="Manage access options"></img>
+              <div className="dropdown-option-label">{option.label}<br/>
               <div className="dropdown-option-description">
                 {option.description}
+              </div>
               </div>
             </div>
           ))}
