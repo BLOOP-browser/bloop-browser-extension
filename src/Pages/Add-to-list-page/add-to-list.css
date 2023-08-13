@@ -57,3 +57,11 @@
     height: 240px;
     overflow-x: hidden;
   }
+
+  .addToListTitle{
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 2px;
+    color: #656465;
+  }
