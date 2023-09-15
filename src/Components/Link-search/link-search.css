@@ -1,0 +1,108 @@
+.linkInfo {
+  position: absolute;
+  top: 5px;
+  left: 1rem;
+  width: fit-content;
+  margin-bottom: 2px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.49);
+}
+
+.link-avatar {
+  height: 3rem;
+  width: 3rem;
+  margin-block: auto;
+  margin-right: 10px;
+}
+
+.link-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: 85px;
+  gap: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 0.6rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-top-left-radius: 10px;  
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; 
+  border-bottom-left-radius: 0;  
+  margin-block: 0.6rem;
+  max-width: 30rem;
+  box-shadow: 0px 0px 6px -1px rgb(0 0 0 / 0.1), 0px 0px 4px -2px rgb(0 0 0 / 0.1);
+  /* Center on mobile */
+  @media (max-width: 767px) {
+    justify-content: flex-start;
+  }
+
+  /* Align to left on desktop */
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.link-container:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -3px rgb(0 0 0 / 0.1), 0px 0px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.link-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-text-description {
+  font-size: 14px;
+  margin-top: 6px;
+  height: 32px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.mylink-text {
+  margin-top: 3px;
+}
+
+.link-favicon {
+  margin-right: 6px;
+  margin-left: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.link-title-container {
+  display: flex; 
+  align-items: center;
+}
+
+.url-title {
+  margin-block: 1px;
+  margin-inline: 0px;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 200px;
+  color: #7A7A7A;
+  border: 1px solid #e9e8e9;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center; 
+  outline: none;
+  overflow: hidden;
+}
+
+.exclam-favicon {
+  margin-right: 4px;
+  margin-left: 2px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+a[href][target="_blank"] {
+  text-decoration: none;
+  color: inherit;
+}

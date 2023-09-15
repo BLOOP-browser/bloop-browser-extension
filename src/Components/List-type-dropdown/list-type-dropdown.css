@@ -21,8 +21,13 @@
 }
 
 .dropdown-selected-manage {
-  color: #777777;
+  color: black;
   font-size: 11px;
+  font-weight: 400;
+}
+
+.dropdown-selected-option {
+  margin-right: 28px;
 }
 
 .dropdown-options {
@@ -44,6 +49,12 @@
   height: 30px;
   width: 30px;
   margin-right: 10px;
+}
+
+.dropdown-selected-image {
+  height: 30px;
+  width: 30px;
+  margin-right: -10px;
 }
 
 .dropdown-option-label {

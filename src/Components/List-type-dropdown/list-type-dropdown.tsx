@@ -13,7 +13,10 @@ interface DropdownProps {
   handleSelectType: Function;
 }
 
-const ListDropdown: React.FC<DropdownProps> = ({ options, handleSelectType }) => {
+const ListDropdown: React.FC<DropdownProps> = ({
+  options,
+  handleSelectType,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<DropdownOption>(
     options[0]
@@ -30,6 +33,11 @@ const ListDropdown: React.FC<DropdownProps> = ({ options, handleSelectType }) =>
   return (
     <div className="dropdown-container">
       <div className="dropdown-selected" onClick={toggleDropdown}>
+        <img
+          src={selectedOption.image}
+          className="dropdown-selected-image"
+          alt="Default manage access"
+        ></img>
         <div className="dropdown-selected-option">{selectedOption.label}</div>
         <div className="dropdown-selected-manage">Manage access &#9660;</div>
       </div>
@@ -41,11 +49,17 @@ const ListDropdown: React.FC<DropdownProps> = ({ options, handleSelectType }) =>
               className="dropdown-option"
               onClick={() => handleOptionClick(option)}
             >
-              <img src={option.image} className="dropdown-option-image" alt="Manage access options"></img>
-              <div className="dropdown-option-label">{option.label}<br/>
-              <div className="dropdown-option-description">
-                {option.description}
-              </div>
+              <img
+                src={option.image}
+                className="dropdown-option-image"
+                alt="Manage access options"
+              ></img>
+              <div className="dropdown-option-label">
+                {option.label}
+                <br />
+                <div className="dropdown-option-description">
+                  {option.description}
+                </div>
               </div>
             </div>
           ))}

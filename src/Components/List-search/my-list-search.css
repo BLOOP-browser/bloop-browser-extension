@@ -1,57 +1,68 @@
-.listInfo{
+.listInfo {
   position: absolute;
+  top: 8px;
+  left: 1rem;
   width: fit-content;
+  padding: 3px;
   font-size: 10px;
-  font-style: italic;
+  font-style: normal;
   color: rgba(0, 0, 0, 0.49);
-  top: 5px;
-  right: 10px;
-
+  background-color: #e4e4e5;
+  border: 0px;
+  border-radius: 2px;
 }
 
-.list-avatar{
+.list-avatar {
   height: 3rem;
   width: 3rem;
   margin-block: auto;
   margin-right: 10px;
 }
 
-.list-container{
+.list-container {
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 4.2rem;
-  gap: 0.3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 0.7rem;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-block: 1.5rem;
-    max-width: 30rem;
-          /* Center on mobile */
+  height: 60px;
+  gap: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 0.6rem;
+  padding-top: 2rem;
+  padding-bottom: 0.3rem;
+  border-radius: 10px;
+  margin-block: 0.6rem;
+  max-width: 30rem;
+  box-shadow: 0px 0px 6px -1px rgb(0 0 0 / 0.1),
+    0px 0px 4px -2px rgb(0 0 0 / 0.1);
+  /* Center on mobile */
   @media (max-width: 767px) {
     justify-content: flex-start;
   }
-  
+
   /* Align to left on desktop */
   @media (min-width: 768px) {
     justify-content: flex-start;
   }
-
 }
 
-.list-text{
+.list-container:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -3px rgb(0 0 0 / 0.1),
+    0px 0px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.list-text {
   display: flex;
   flex-direction: column;
 }
 
-.list-text-description{
-  font-size: 11px;
-  color: #545454;
+.list-text-description {
+  font-size: 12px;
+  margin-top: 4px;
+  height: 25px;
   overflow: hidden;
-  white-space:normal;
-  text-overflow: ellipsis;
-  height: 26px;
+}
+
+.blip-text{
+  color: black;
 }

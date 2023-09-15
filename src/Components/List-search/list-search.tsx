@@ -14,7 +14,7 @@ const ListSearchResult: React.FC<Props> = ({ title, description, listType,  link
     <div className='starredContainer'>
       <div className='listInfo'>{listType} list of {linksNumber} links</div>
     <div className="OurSearchResultContainerTest">
-        <img src = {theirAvatar} className='starredCurator'/>
+        <img src = {theirAvatar} className='starredCurator' alt='profile avatar'/>
       <div className="OurSearchResultTitleTest">{title}</div>
       <p className="OurSearchResultDescriptionTest">{description}</p>
     </div>

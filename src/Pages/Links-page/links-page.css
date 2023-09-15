@@ -1,0 +1,24 @@
+.popup-content-chrome {
+  padding: 16px;
+  margin-inline: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.popup-content-chrome::-webkit-scrollbar-track {
+  background: none; /* Hide the scrollbar track */
+}
+
+.popup-content-chrome::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* You can adjust color/transparency as you like */
+}
+
+/* Set scrollbar styling for Firefox */
+.popup-content-chrome {
+  scrollbar-width: thin; /* Adjust the width of the scrollbar for Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Style the thumb but make the track transparent */
+}

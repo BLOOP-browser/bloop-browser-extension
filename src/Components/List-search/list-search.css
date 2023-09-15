@@ -68,13 +68,11 @@
   
   .OurSearchResultTitleTest {
     font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #1a0dab;
-  }
-  .OurSearchResultTitleTest:hover{
-    
-        text-decoration: underline;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
   }
   
   .OurSearchResultDescriptionTest {

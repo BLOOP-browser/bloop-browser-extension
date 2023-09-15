@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./linkAdded.css";
-import logo from "./logo.svg";
 
 interface ILInkAddedProps {
-  onLinkAdded: Function
+  onLinkAdded: Function;
 }
 
 const LinkAdded: React.FC<ILInkAddedProps> = ({ onLinkAdded }) => {
@@ -12,19 +11,16 @@ const LinkAdded: React.FC<ILInkAddedProps> = ({ onLinkAdded }) => {
   };
 
   return (
-    
     <div className="chrome-ext-window">
-    <div className="login-container">
-    <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo" />
+      <div className="login-container">
+        <div className="logo-container"></div>
+        <div className="form">
+          <p className="star-emoji">✨</p>
+          <p className="loginlabel">Blip saved to List</p>
+          {/* <button className = "loginbutton" type="submit" onClick={handleSubmit}>Add new Link</button> */}
+        </div>
       </div>
-      <div className="form">
-      <p className="loginlabel">Link added successfully! </p>
-        {/* <button className = "loginbutton" type="submit" onClick={handleSubmit}>Add new Link</button> */}
-      </div>
-      
-    </div>
-    <div className = "tinysubtitle">BLOOP Private Beta 2023</div>
+      <div className="tinysubtitle">BLOOP Beta Release 2023</div>
     </div>
   );
 };

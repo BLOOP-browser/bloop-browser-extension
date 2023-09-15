@@ -12,10 +12,12 @@ import Login from './Pages/Login-page/login';
 import AddLinkPage from './Pages/Add-link-page/add-link';
 import AddToListPage from './Pages/Add-to-list-page/add-to-list';
 import AddListPage from './Pages/Add-list-page/add-list-page';
+import UserProfile from './Pages/User-profile-page/user-profile'
 import AuthService from './services/auth-services';
 import LinkService from './services/link-service';
 import CollectionService from './services/collection-service';
 import LinkAdded from './Pages/Link-Added/LinkAdded';
+import LinksPage from './Pages/Links-page/links-page';
 
 
 enum View{
@@ -23,6 +25,8 @@ enum View{
   Error,
   Login,
   AddLink,
+  UserProfile,
+  LinksPage,
   AddCollection,
   Collections,
   LinkAdded,
@@ -35,6 +39,7 @@ function App() {
   const [urlDescription, setUrlDescription] = useState<string>("");
   const [jwtToken, setJwtToken] = useState<string>("");
   const [collectionId, setCollectionId] = useState<number|null>();
+  const [selectedListId, setSelectedListId] = useState<number | null>(null);
 
   const [view, setView] = useState<View>(View.AddLink);
   
@@ -75,7 +80,7 @@ function App() {
     setCollectionId(collId);
     LinkService.addLink({mainDescription:urlDescription,url:currentUrl}).then((res) => {
       CollectionService.addLinkToCollection(collId, [res.data.id]).then((res) => {
-        console.log("added link to colection");
+        console.log("added link to collection");
         console.log(res.data);
       })
     })
@@ -101,6 +106,15 @@ function App() {
     setView(View.AddLink);
   }
 
+  function redirectToUserProfileLink(){
+    setView(View.UserProfile);
+  }
+
+  function showLinks(id: number) {
+    setSelectedListId(id);
+    setView(View.LinksPage);
+  }
+
   function redirectToCollections(){
     setView(View.Collections);
   }
@@ -108,7 +122,11 @@ function App() {
   const renderView = () => {
     switch(view) {
       case View.AddLink:
-        return <AddLinkPage linkUrlPath={currentUrl} handleAddLink={handleAddLink}/>
+        return <AddLinkPage linkUrlPath={currentUrl} handleAddLink={handleAddLink} navigateToProfile={() => setView(View.UserProfile)}/>
+      case View.UserProfile:
+        return <UserProfile backToLink={redirectToLink} onShowLinks={showLinks}/>;
+      case View.LinksPage:
+        return <LinksPage collectionId={selectedListId} backToLink={redirectToUserProfileLink}/>;
       case View.Login:
         return <Login onLogin={handleLogin}/>
       case View.AddCollection:
@@ -119,35 +137,15 @@ function App() {
         return <LinkAdded onLinkAdded={onLinkAdded} />
   
       default:
-        return <AddLinkPage linkUrlPath={currentUrl} handleAddLink={handleAddLink}/>
+        return <AddLinkPage linkUrlPath={currentUrl} handleAddLink={handleAddLink} navigateToProfile={() => setView(View.UserProfile)}/>
     }
   }
 
   return (
-      <div className="app">
-        {renderView()}
-      </div>
+        <div className="app">
+          {renderView()}
+        </div>
     );
-
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.tsx</code> and save to reload.
-  //       </p>
-  //       <Link to="/login" className='button-login'> Go to Login</Link>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
 }
 
 export default App;

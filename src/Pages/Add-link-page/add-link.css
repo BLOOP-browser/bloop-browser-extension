@@ -1,18 +1,13 @@
-
-.fieldset{
+.fieldset {
   width: 300px;
 }
 
-.chrome-ext-window{
+.chrome-ext-window {
   width: 302px;
   height: 387px;
   position: relative;
 }
 
-.form-description{
-    padding-left: 10px;
-    font-size: 14px;
-}
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -22,22 +17,34 @@
   padding-left: 15px;
 }
 
+.user-profile {
+  margin-inline: 25px;
+  margin-top: 6px;
+}
+
+.my-avatar {
+  display: flex;
+  text-align: center;
+}
+
 .closeicon {
   opacity: 0%;
 }
 
-.save-link-button{
-    background: black;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    border: none;
-    margin-right: 15px;
+.save-link-button {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  padding-block: 5px;
+  width: 5rem;
+  border: none;
+  margin-right: 16px;
+  margin-top: 8px;
+  cursor: pointer;
 }
 
-
 .grid-modal {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   margin-inline: 15px;
   font-size: 0.9rem;
   display: grid;
@@ -50,64 +57,119 @@
   gap: 10px;
 }
 
-
-input.oneline-link{
-  margin-block:1px;
+input.oneline-link {
+  margin-block: 1px;
   margin-inline: 0px;
-  padding-block: 7px;
-  padding-inline: 0px;
-  font-size: 12px;
-  width: 100%;
-  border-top: solid;
-  border-color:rgba(0, 0, 0, 0.138);
-  border-right: none;
-  border-left: none;
-  border-bottom: none;
-  overflow:hidden;
-}
-
-input.oneline-title{
-  background-color:rgb(246, 246, 246);
-  margin-block:1px;
-  margin-inline: 10px;
-  padding-block: 7px;
-  padding-inline: 0px;
-  font-size: .9rem;
-  font-weight: 700;
-  width: 72vw;
-  border-width: .1px;
-  border: none;
-  overflow:hidden;
-}
-
-textarea.paragraph-linkdescription{
-  margin-block:1px;
-  margin-inline: 0px;
-  padding-block: 7px;
-  padding-inline: 0px;
-  resize: none;
-  border: 2px solid #ccc;
-  font-size: 13px;
-  border:0;
-  outline-style: none;
-  overflow-y: scroll;
-  overflow-x:hidden;
-  box-shadow: none;
-  width: 72vw;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px;
+  font-size: 14px;
+  width: 85%;
+  color: #7a7a7a;
+  border: 1px solid #e9e8e9;
+  border-radius: 8px;
+  outline: none;
   overflow: hidden;
 }
 
-
-
-fieldset{
-  border-radius: 0.5rem;
-  margin-block: 1rem;
+input.oneline-title {
+  background-color: rgb(246, 246, 246);
+  margin-block: 1px;
+  margin-inline: 10px;
+  padding-block: 7px;
+  padding-inline: 0px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 72vw;
+  border-width: 0.1px;
+  border: none;
+  overflow: hidden;
 }
 
-.popup-content-header-chrome{
-  margin-left: .5rem;
-  margin-bottom: .8rem;
+textarea.paragraph-linkdescription {
+  margin-block: 1px;
+  margin-inline: 0px;
+  padding-block: 2px;
+  padding-inline: 0px;
+  resize: none;
+  border: 1px solid white;
+  font-size: 14px;
+  border: 0;
+  outline-style: none;
+  box-shadow: none;
+  width: 72vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.paragraph-linkdescription::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.paragraph-linkdescription {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+fieldset {
+  border: 0;
+  outline-style: none;
+}
+
+.popup-content-header-chrome {
+  margin-left: 0.5rem;
+  margin-bottom: 0.6rem;
   color: gray;
   font-size: 13px;
+}
+
+footer {
+  position: fixed;
+  font-size: 12px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.my-blips {
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  width: 11.5rem;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.my-blips:hover {
+  border: 2px solid #8c8c8c;
+}
+
+.user-stats {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.user-profile-stats-btn {
+  color: #656465;
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+.bloop-logo {
+  width: 20px;
+  height: 20px;
+  margin-left: 18px;
+  margin-bottom: -26px;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
 }

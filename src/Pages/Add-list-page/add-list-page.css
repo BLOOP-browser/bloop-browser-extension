@@ -16,29 +16,36 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.addListTitle{
-  font-size: 14px;
+.addListTitle {
+  font-size: 13px;
   margin-left: 20px;
   margin-right: 20px;
   color: #656465;
 }
+
 .ListTitleField {
-  width: 99%;
-  font-size: 13px;
-  background: rgba(128, 128, 128, 0.1);
-  border-color: lightgrey;
-  border-width: 1px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  width: 92%;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-bottom: 10px;
   outline: none;
 }
 .descriptionTitleField {
-  width: 99%;
+  width: 92%;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
   height: 35px;
-  font-size: 11px;
-  background: rgba(128, 128, 128, 0.1);
-  border: none;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 12px;
   resize: none;
   outline: none;
 }

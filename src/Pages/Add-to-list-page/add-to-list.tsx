@@ -49,6 +49,11 @@ export function AddToListPage(props: InitialProps) {
     props.backToLink();
   }
 
+  const loading = {
+    color: "#656465", 
+    marginLeft: "10px"
+  }
+
   return (
     <div className="chrome-ext-window">
       <div className="modal-header">
@@ -59,19 +64,19 @@ export function AddToListPage(props: InitialProps) {
         </div>
         {isSelected ? (
           <button className="save-link-tolist-button" onClick={handleChooseCollection}>
-            Save
+            Done
           </button>
         ) : (
-          <button className="inactive-save-button">Save</button>
+          <button className="inactive-save-button">Done</button>
         )}
       </div>
-      <div className="addToListTitle">Select a list or create a new one</div>
-      <div className="popup-content-chrome">
+      <div className="list-popup-content-chrome">
         <div className="popup-content-header-chrome">
-          Your lists ({collectionsData.length ?? 0})
+          Add to a list or create a new one <br/>
+          <b>{collectionsData.length ?? 0} lists</b>
         </div>
         {isLoading ? (
-          <p>Loading..</p>
+          <p style={loading}>Loading..</p>
         ) : collectionsData.length > 0 ? (
           collectionsData.map((item, index) => (
             <SelectMyListSearchResult

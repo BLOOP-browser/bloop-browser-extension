@@ -14,7 +14,7 @@ export function MyListCreate(props: Props){
     <div className='starredContainer'>
 
     <div className="select-list-container">
-        <img src = {myAvatar} className='list-avatar'/>
+        <img src = {myAvatar} className='list-avatar' alt='User avatar'/>
         <div className='mylist-text'>
       <input placeholder="Collection title" className="ListTitleField" onChange={props.setTitle}/>
       <textarea rows = {3} placeholder="Add description and tags here" className="descriptionTitleField" onChange={props.setDescription}/>
