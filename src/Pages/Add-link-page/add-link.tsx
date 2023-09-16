@@ -97,13 +97,14 @@ return(
             
           </fieldset>
           <footer>
+            
+            <div className='user-stats'>
             <a href="https://getbloop.co/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer" className="bloop-redirect"
             >
             <img src={logo} className="bloop-logo" alt="Bloop logo" />
             </a>
-            <div className='user-stats'>
             <button className='my-blips' onClick={props.navigateToProfile}>
               <img src={star} className="star-icon" alt="Star icon" />
               My saves

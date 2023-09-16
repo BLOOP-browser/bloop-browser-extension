@@ -49,12 +49,12 @@
 
 
   .list-popup-content-chrome {
-    padding: 16px;
+    padding: 10px;
     margin-inline: .5rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 240px;
+    height: 260px;
     overflow-x: hidden;
   }
 

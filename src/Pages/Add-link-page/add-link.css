@@ -10,6 +10,7 @@
 
 .modal-header {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 5px;
@@ -62,7 +63,7 @@ input.oneline-link {
   margin-inline: 0px;
   padding: 10px;
   font-size: 14px;
-  width: 85%;
+  width: 90%;
   color: #7a7a7a;
   border: 1px solid #e9e8e9;
   border-radius: 8px;
@@ -95,7 +96,7 @@ textarea.paragraph-linkdescription {
   border: 0;
   outline-style: none;
   box-shadow: none;
-  width: 72vw;
+  width: 80vw;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -131,14 +132,19 @@ footer {
   width: 100%;
 }
 
+
 .my-blips {
   display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
   align-items: center;
-  padding: 1px;
+  padding-inline: 8px;
+  padding-block: 3px;
   text-align: center;
   justify-content: center;
   background-color: white;
-  width: 11.5rem;
+  width: auto;
   font-size: 13px;
   border: 2px solid black;
   border-radius: 20px;
@@ -150,9 +156,14 @@ footer {
 }
 
 .user-stats {
-  text-align: right;
+  position: relative;
   margin-bottom: 20px;
-  margin-left: 100px;
+}
+
+.user-states .bloop-redirect{
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
 }
 
 .user-profile-stats-btn {
@@ -165,7 +176,6 @@ footer {
   width: 20px;
   height: 20px;
   margin-left: 18px;
-  margin-bottom: -26px;
 }
 
 .star-icon {

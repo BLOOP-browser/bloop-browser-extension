@@ -25,6 +25,16 @@
   }
 }
 
+.select-list-container .selected-list-check-icon{
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  bottom: 25px;
+  right: 15px;
+  opacity: 0%;
+
+}
+
 .selected-list-container {
   display: flex;
   cursor: pointer;
@@ -39,6 +49,7 @@
   border-radius: 10px;
   margin-block: 0.6rem;
   max-width: 30rem;
+  background-color: rgb(227, 227, 227);
   box-shadow: 0px 0px 25px -5px rgb(0 0 0 / 0.1),
     0px 0px 10px -6px rgb(0 0 0 / 0.1);
   /* Center on mobile */
@@ -50,6 +61,15 @@
   @media (min-width: 768px) {
     justify-content: flex-start;
   }
+}
+
+.selected-list-container .selected-list-check-icon{
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  opacity: 100%;
 }
 
 .listInfo {

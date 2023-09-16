@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./my-list-search-select.css";
 import { link } from "fs";
+import checkicon from "../../Assets/check-mark.svg";
 
 interface Props {
   collectionId: number;
@@ -52,6 +53,7 @@ const SelectMyListSearchResult: React.FC<Props> = ({
           <b>{listType} list</b> of{" "}
           <span className="blip-text">{linksNumber} blips</span>
         </div>
+        <img src ={checkicon} className="selected-list-check-icon"/>
       </div>
     </div>
   );

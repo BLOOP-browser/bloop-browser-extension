@@ -72,8 +72,8 @@ export function AddToListPage(props: InitialProps) {
       </div>
       <div className="list-popup-content-chrome">
         <div className="popup-content-header-chrome">
-          Add to a list or create a new one <br/>
-          <b>{collectionsData.length ?? 0} lists</b>
+          Add to a list or create a new one  <br/>
+          <b> {collectionsData.length ?? 0} lists</b>
         </div>
         {isLoading ? (
           <p style={loading}>Loading..</p>

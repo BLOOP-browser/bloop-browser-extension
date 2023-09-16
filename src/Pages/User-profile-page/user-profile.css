@@ -1,5 +1,5 @@
 .inactive-save-button {
-  background: #374151;
+  background: #5c5d60;
   color: white;
   border-radius: 5px;
   padding-block: 5px;
@@ -39,13 +39,16 @@
 }
 
 .user-info {
+  position: absolute;
+  left: 100px;
+  top: 20px;
   color: #656465;
   font-size: 12px;
-  margin-right: 120px;
 }
 
 .user-profile-avatar {
+  position: absolute;
+  left:50px;
   height: 3rem;
   width: 3rem;
-  margin-left: -10px;
 }

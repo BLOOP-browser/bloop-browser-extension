@@ -59,7 +59,7 @@ export function UserProfile(props: InitialProps) {
         </div>
         <img src = {myAvatar} className='user-profile-avatar' alt='User avatar'/>
         <div className="user-info">
-          @user<br/>
+          <b>You</b><br/>
           <span>
             {linksCount} blips + {collectionsData.length ?? 0} lists
           </span>
