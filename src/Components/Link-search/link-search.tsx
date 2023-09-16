@@ -27,6 +27,7 @@ const LinkSearch: React.FC<Props> = ({ url, image, title, description, createAt 
 
   // Calculate the difference in various units
   const diffInSeconds = Math.floor((currentDate.getTime() - createdAtDate.getTime()) / 1000);
+  const diffInMinutes = Math.floor(diffInSeconds / 60); // Calculate difference in minutes
   const diffInHours = Math.floor(diffInSeconds / 3600);
   const diffInDays = Math.floor(diffInHours / 24);
   const diffInMonths = Math.floor(diffInDays / 30);
@@ -42,6 +43,8 @@ const LinkSearch: React.FC<Props> = ({ url, image, title, description, createAt 
     displayDate = `${diffInDays} day${diffInDays === 1 ? '' : 's'} ago`;
   } else if (diffInHours > 0) {
     displayDate = `${diffInHours} hour${diffInHours === 1 ? '' : 's'} ago`;
+  } else if (diffInMinutes > 0) {
+    displayDate = `${diffInMinutes} minute${diffInMinutes === 1 ? '' : 's'} ago`; 
   } else {
     displayDate = `${diffInSeconds} second${diffInSeconds === 1 ? '' : 's'} ago`;
   }
