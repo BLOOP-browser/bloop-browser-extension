@@ -33,7 +33,7 @@ const SelectMyListSearchResult: React.FC<Props> = ({
 
   // Truncate function to trim and append ".."
   const truncate = (text: string, limit: number) => {
-    return text.length > limit ? text.substring(0, limit - 2) + ".." : text;
+    return text.length > limit ? text.substring(0, limit - 8) + ".." : text;
   };
 
   // Use truncate function for title and description
