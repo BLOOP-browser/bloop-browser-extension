@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./my-list-search-select.css";
 import { link } from "fs";
 import checkicon from "../../Assets/check-mark.svg";
+import privateIcon from "../../Assets/private-list-icon.svg";
 
 interface Props {
   collectionId: number;
@@ -21,6 +22,9 @@ const SelectMyListSearchResult: React.FC<Props> = ({
   selectHandler,
 }) => {
   const [isSelected, setIsSelected] = useState(false);
+
+  //check if private list
+  const isPrivateList = listType.toLowerCase().includes('private');
 
   const listSelectHandler = () => {
     setIsSelected(!isSelected);
@@ -45,7 +49,9 @@ const SelectMyListSearchResult: React.FC<Props> = ({
         onClick={listSelectHandler}
       >
         <div className="mylist-text">
-          <div className="OurSearchResultTitleTest">{truncatedTitle}</div>
+          <div className={isPrivateList ? "PrivateSearchResultTitleTest":"OurSearchResultTitleTest"}>{truncatedTitle}
+          <img src = {privateIcon} className= "icon"/>
+          </div>
           <p className="list-text-description">{truncatedDescription}</p>
         </div>
         <div className="listInfo">

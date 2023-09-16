@@ -1,6 +1,7 @@
 import React from "react";
 import "./my-list-search.css";
 import { link } from 'fs';
+import privateIcon from "../../Assets/private-list-icon.svg";
 
 interface Props {
   id: number; 
@@ -25,6 +26,8 @@ const MyListSearchResult: React.FC<Props> = ({
     return text.length > limit ? text.substring(0, limit - 2) + ".." : text;
   }
 
+  const isPrivateList = listType.toLowerCase().includes('private');
+
   // Use truncate function for title and description
   const truncatedTitle = truncate(title, 30);
   const truncatedDescription = truncate(description, 80);
@@ -33,7 +36,9 @@ const MyListSearchResult: React.FC<Props> = ({
     <div className="starredContainer" onClick={() => onListClick?.(id)}>
       <div className="list-container">
         <div className="list-text">
-          <div className="OurSearchResultTitleTest">{truncatedTitle}</div>
+          <div className={isPrivateList ? "PrivateSearchResultTitleTest":"OurSearchResultTitleTest"}>{truncatedTitle}
+          <img src = {privateIcon} className= "icon"/>
+          </div>
 
           <p className="list-text-description">{truncatedDescription}</p>
         </div>
