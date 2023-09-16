@@ -8,7 +8,7 @@ import {
 import { CreateCollection, CollectionData, CollectionSearchData } from "../models/collection";
 
 const addLink = (addLink: AddLink) => {
-  console.log(addLink);
+  // console.log(addLink);
   return http.post<LinkData>(
     `/link`,
     { url: addLink.url, mainDescription: addLink.mainDescription },

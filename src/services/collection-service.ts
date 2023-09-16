@@ -3,7 +3,7 @@ import { CreateCollection, CollectionData, CollectionSearchData } from "../model
 import axios from "axios";
 
 const createCollection = (collectionDTO: CreateCollection) => {
-  console.log(collectionDTO);
+  // console.log(collectionDTO);
   var headers = {
     headers: { 
       "Content-type": "application/json",

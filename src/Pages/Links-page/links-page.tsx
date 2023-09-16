@@ -14,7 +14,7 @@ export function LinksPage(props: Props) {
   const [links, setLinks] = useState<Array<LinkData>>([]);
 
   function handleBack() {
-    console.log("handle back");
+    // console.log("handle back");
     props.backToLink();
   }
 

@@ -22,7 +22,7 @@ const SearchResult: React.FC<SearchResultProps> = ({
 
   const handleStarClick = () => {
     setStarred(!starred);
-    console.log("starred is set to " + !starred);
+    // console.log("starred is set to " + !starred);
   }
 
 /*   const handleMouseEnter = () => {

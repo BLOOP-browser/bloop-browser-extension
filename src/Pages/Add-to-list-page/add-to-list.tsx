@@ -35,12 +35,12 @@ export function AddToListPage(props: InitialProps) {
   }
 
   function handleSubmit() {
-    console.log("Create new collection");
+    // console.log("Create new collection");
     props.handleAddCollection();
   }
 
   function handleChooseCollection() {
-    console.log("Choose collection");
+    // console.log("Choose collection");
     props.handleChooseLink(collectionId);
   }
 

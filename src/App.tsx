@@ -45,7 +45,7 @@ function App() {
   
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      console.log(`get url ${tabs[0].url}`);
+      // console.log(`get url ${tabs[0].url}`);
       setCurrentURL(tabs[0].url ?? "");
     });
   }, []);
@@ -75,13 +75,13 @@ function App() {
   }
 
   function handleChooseCollection(collId: number){
-    console.log(currentUrl);
-    console.log(urlDescription);
+    // console.log(currentUrl);
+    // console.log(urlDescription);
     setCollectionId(collId);
     LinkService.addLink({mainDescription:urlDescription,url:currentUrl}).then((res) => {
       CollectionService.addLinkToCollection(collId, [res.data.id]).then((res) => {
-        console.log("added link to collection");
-        console.log(res.data);
+        // console.log("added link to collection");
+        // console.log(res.data);
       })
     })
     setCurrentURL("");

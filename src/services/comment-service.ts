@@ -2,7 +2,7 @@ import http from "./http";
 import {Comment} from "../models/comment"
 
 const createLinkComment = (linkId: number, comment: string) => {
-  console.log(comment);
+  // console.log(comment);
   return http.post<any>(`/link/${linkId}/comment`, {
     comment: comment, 
   },{  headers: {

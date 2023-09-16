@@ -36,7 +36,7 @@ export function UserProfile(props: InitialProps) {
   }, []);
 
   function handleBack() {
-    console.log("handle back");
+    // console.log("handle back");
     props.backToLink();
   }
 

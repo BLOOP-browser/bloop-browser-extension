@@ -51,11 +51,11 @@ export function AddListPage(props: InitialProps) {
       accessType: type,
     })
       .then((res) => {
-        console.log("list created successfully");
+        // console.log("list created successfully");
         props.backToCollections();
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setErrorMessage("Internal error, please try to create list later");
       });
   }

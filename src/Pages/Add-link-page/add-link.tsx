@@ -27,7 +27,7 @@ export function AddLinkPage(props: InitialProps) {
   useEffect(() => {
     if(!currentUrl){
       chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        console.log(`get url ${tabs[0].url}`);
+        // console.log(`get url ${tabs[0].url}`);
         setCurrentURL(tabs[0].url ?? "");
       });
     }
@@ -59,7 +59,7 @@ export function AddLinkPage(props: InitialProps) {
 
   
   function handleSubmit(){
-    console.log("addLink");
+    // console.log("addLink");
     props.handleAddLink(currentUrl, urlDescription);
   }
 
