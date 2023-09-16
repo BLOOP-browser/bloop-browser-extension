@@ -61,7 +61,7 @@ const LinkSearch: React.FC<Props> = ({ url, image, title, description, createAt 
           >
             <div className="link-title-container">
             <div className="url-title">
-              <img className={`link-favicon ${!image && 'exclam-favicon'}`} src={image || exclam} alt={image ? "Link favicon" : "Exclamation icon"} />
+              <img className={`link-favicon ${!image && 'exclam-favicon'}`} src={image || exclam} alt={image ? "" : "Exclamation icon"} />
               {truncatedTitle}</div>
             </div>
           </a>
