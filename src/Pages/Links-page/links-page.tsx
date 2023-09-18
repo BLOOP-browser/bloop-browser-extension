@@ -13,7 +13,7 @@ interface Props {
 
 export function LinksPage(props: Props) {
   const [links, setLinks] = useState<Array<LinkData>>([]);
-  const [collectionsTitle, setCollectionsTitle] = useState("");
+  const [collectioninfo, setCollectioninfo] = useState<Array<CollectionData>>([]);
   const [isLoading, setIsLoading] = useState(true);
   function handleBack() {
     // console.log("handle back");
@@ -34,17 +34,18 @@ export function LinksPage(props: Props) {
           console.error("Links API error", error);
           setIsLoading(false); 
         })
-        .finally(()=>{
+        /* .finally(()=>{
           //after fetching links data, fetch collections title
           CollectionService.getCollectionById(props.collectionId)
           .then(
             (res)=> {
             console.log("Title API Response:", res.data);
-            const data: Array <CollectionData> = 
+            const coldata: Array <CollectionData> = 
               res.data ? res.data : [];
-              //Pull in collection title!!
+              setCollectioninfo(coldata);
+              //Collection title not working!!
           })
-        });
+        }) */;
       
     }
   }, [props.collectionId]);
@@ -52,7 +53,8 @@ export function LinksPage(props: Props) {
   return (
     <div className="chrome-ext-window">
       <div className="modal-header">
-        <div className="collectionTitle"></div>
+        <div className="collectionTitle"> {collectioninfo[2]}</div>
+        
         <div className="popup-arrow">
           <span className="material-icons">
             <img src={back} onClick={handleBack} alt="Back" />
