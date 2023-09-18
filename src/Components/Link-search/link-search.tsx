@@ -18,7 +18,7 @@ const LinkSearch: React.FC<Props> = ({ url, image, title, description, createAt 
   }
 
   // Use truncate function for title and description
-  const truncatedTitle = truncate(title, 28);
+  const truncatedTitle = truncate(title, 27);
   const truncatedDescription = truncate(description, 70);
 
   // Convert createAt string to Date object

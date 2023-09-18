@@ -33,6 +33,14 @@ const getCollections = () => {
   },});
 }
 
+const getCollectionById = (collectionId: number | null) => {
+  return http.get<[CollectionData]>(`/collection/${collectionId}`, {  headers: {
+    "Content-type": "application/json",
+    "Accept": "/",
+    "Authorization" : `Bearer ${localStorage.getItem("auth")}`
+  },});
+}
+
 const getLinksForCollection = (collectionId: number, links: Array<number>) => {
   return http.get<CollectionData>(`/collection/${collectionId}/${links}`, {
     headers: {
@@ -59,6 +67,7 @@ const CollectionService = {
   getCollections,
   getLinksForCollection,
   addLinkToCollection,
+  getCollectionById
 }
 
 export default CollectionService;

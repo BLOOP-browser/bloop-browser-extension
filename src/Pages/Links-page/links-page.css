@@ -22,3 +22,14 @@
   scrollbar-width: thin; /* Adjust the width of the scrollbar for Firefox */
   scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Style the thumb but make the track transparent */
 }
+
+.modal-header .collectionTitle{
+  position: absolute;
+  left: 30px;
+  font-size: 1rem;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
