@@ -1,5 +1,6 @@
 import http from "./http";
 import { CreateCollection, CollectionData, CollectionSearchData } from "../models/collection";
+import { LinkData } from "../models/link"
 import axios from "axios";
 
 const createCollection = (collectionDTO: CreateCollection) => {
@@ -32,6 +33,15 @@ const getCollections = () => {
   },});
 }
 
+const getLinksForCollection = (collectionId: number, links: Array<number>) => {
+  return http.get<CollectionData>(`/collection/${collectionId}/${links}`, {
+    headers: {
+      "Content-type": "application/json",
+      "Accept": "/",
+      "Authorization": `Bearer ${localStorage.getItem("auth")}`
+    }
+  });
+}
 
 const addLinkToCollection = (collectionId: number, links: Array<number>) => {
   return http.post<CollectionData>(`/collection/${collectionId}/link`, {
@@ -47,6 +57,7 @@ const addLinkToCollection = (collectionId: number, links: Array<number>) => {
 const CollectionService = {
   createCollection,
   getCollections,
+  getLinksForCollection,
   addLinkToCollection,
 }
 

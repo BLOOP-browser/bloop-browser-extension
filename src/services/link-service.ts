@@ -5,7 +5,6 @@ import {
   LinkSearchData,
   DuckduckgoLinkData,
 } from "../models/link";
-import { CreateCollection, CollectionData, CollectionSearchData } from "../models/collection";
 
 const addLink = (addLink: AddLink) => {
   // console.log(addLink);
@@ -58,16 +57,6 @@ const getLinks = () => {
   });
 };
 
-const getLinksByCollectionId = (collectionId: number) => {
-  return http.get<Array<LinkData>>(`/collection/${collectionId}/link`, {
-    headers: {
-      "Content-type": "application/json",
-      Accept: "/",
-      Authorization: `Bearer ${localStorage.getItem("auth")}`,
-    },
-  });
-};
-
 const removeLink = (linkId: number) => {
   return http.delete<LinkData>(`/link/${linkId}`, {
     headers: {
@@ -111,7 +100,6 @@ const LinkService = {
   editLinkMainDescription,
   getLink,
   getLinks,
-  getLinksByCollectionId,
   removeLink,
   searchLinks,
   searchPublicLinks,

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import LinkSearch from "../../Components/Link-search/link-search";
-import LinkService from "../../services/link-service";
+import CollectionService from "../../services/collection-service";
 import { LinkData } from "../../models/link";
 import back from "../../Assets/back-arrow.svg";
-import './links-page.css'
+import "./links-page.css";
 
 interface Props {
   collectionId: number | null;
@@ -19,12 +19,17 @@ export function LinksPage(props: Props) {
   }
 
   useEffect(() => {
-    // Fetching links from LinkService instead of CollectionService
-    LinkService.getLinks().then((res) => {
-      // Assuming that the response contains an array of LinkData directly
-      setLinks(res.data || []);
-    });
-  }, [props.collectionId]);  // Note: If you're not using collectionId in fetching the links, you might want to remove it from the dependency array.
+    if (props.collectionId !== null) {
+      CollectionService.getLinksForCollection(props.collectionId, []).then(
+        (res) => {
+          console.log("API Response:", res.data);
+          const data: Array<LinkData> =
+            res.data && res.data.linksList ? res.data.linksList : [];
+          setLinks(data);
+        }
+      );
+    }
+  }, [props.collectionId]);
 
   return (
     <div className="chrome-ext-window">
@@ -36,22 +41,22 @@ export function LinksPage(props: Props) {
         </div>
       </div>
       <div className="popup-content-chrome">
-      <div className="popup-content-header-chrome">
+        <div className="popup-content-header-chrome">
           Click on the saved blips to view the content
         </div>
-      {links.map((link, index) => (
-        <LinkSearch
-          // key={index}
-          url={link.url}
-          image={link.image || ""}
-          title={link.title || ""}
-          description={link.description || ""}
-          createAt={link.createAt || ""}
-        />
-      ))}
+        {links.map((link, index) => (
+          <LinkSearch
+            key={index} // It's better to provide a key
+            url={link.url}
+            image={link.image || ""}
+            title={link.title || ""}
+            description={link.description || ""}
+            createAt={link.createAt || ""}
+          />
+        ))}
       </div>
     </div>
   );
-};
+}
 
 export default LinksPage;
