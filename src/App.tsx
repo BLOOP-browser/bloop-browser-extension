@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import {Link} from 'react-router-dom';
-import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import logo from './logo.svg';
+// import {Link} from 'react-router-dom';
+// import './App.css';
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
+// import AuthService from './services/auth-services';
 import Login from './Pages/Login-page/login';
-
 import AddLinkPage from './Pages/Add-link-page/add-link';
 import AddToListPage from './Pages/Add-to-list-page/add-to-list';
 import AddListPage from './Pages/Add-list-page/add-list-page';
 import UserProfile from './Pages/User-profile-page/user-profile'
-import AuthService from './services/auth-services';
 import LinkService from './services/link-service';
 import CollectionService from './services/collection-service';
 import LinkAdded from './Pages/Link-Added/LinkAdded';
@@ -34,7 +33,6 @@ enum View{
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
-
   const [currentUrl, setCurrentURL] = useState<string>("");
   const [urlDescription, setUrlDescription] = useState<string>("");
   const [jwtToken, setJwtToken] = useState<string>("");

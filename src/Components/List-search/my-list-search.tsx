@@ -1,6 +1,6 @@
 import React from "react";
 import "./my-list-search.css";
-import { link } from 'fs';
+// import { link } from 'fs';
 import privateIcon from "../../Assets/private-list-icon.svg";
 
 interface Props {
@@ -37,7 +37,7 @@ const MyListSearchResult: React.FC<Props> = ({
       <div className="list-container">
         <div className="list-text">
           <div className={isPrivateList ? "PrivateSearchResultTitleTest":"OurSearchResultTitleTest"}>{truncatedTitle}
-          <img src = {privateIcon} className= "icon"/>
+          <img src = {privateIcon} className= "icon" alt="Private list icon"/>
           </div>
 
           <p className="list-text-description">{truncatedDescription}</p>

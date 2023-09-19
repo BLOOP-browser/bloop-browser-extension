@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./linkAdded.css";
 
 interface ILInkAddedProps {
@@ -6,9 +6,9 @@ interface ILInkAddedProps {
 }
 
 const LinkAdded: React.FC<ILInkAddedProps> = ({ onLinkAdded }) => {
-  const handleSubmit = () => {
-    onLinkAdded();
-  };
+  // const handleSubmit = () => {
+  //   onLinkAdded();
+  // };
 
   return (
     <div className="chrome-ext-window">

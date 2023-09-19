@@ -5,7 +5,7 @@ import back from "../../Assets/back-arrow.svg";
 import privatelist from "../../Assets/private-list-icon.svg";
 import publiclist from "../../Assets/public-list-icon.svg";
 import unlistedlist from "../../Assets/unlisted-icon.svg";
-import MyListCreate from "../../Components/List-search/my-list-create";
+// import MyListCreate from "../../Components/List-search/my-list-create";
 import CollectionService from "../../services/collection-service";
 
 interface InitialProps {

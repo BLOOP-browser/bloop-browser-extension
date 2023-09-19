@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./my-list-search-select.css";
-import { link } from "fs";
+// import { link } from "fs";
 import checkicon from "../../Assets/check-mark.svg";
 import privateIcon from "../../Assets/private-list-icon.svg";
 
@@ -50,7 +50,7 @@ const SelectMyListSearchResult: React.FC<Props> = ({
       >
         <div className="mylist-text">
           <div className={isPrivateList ? "PrivateSearchResultTitleTest":"OurSearchResultTitleTest"}>{truncatedTitle}
-          <img src = {privateIcon} className= "icon"/>
+          <img src = {privateIcon} className= "icon" alt="Private list icon"/>
           </div>
           <p className="list-text-description">{truncatedDescription}</p>
         </div>
@@ -59,7 +59,7 @@ const SelectMyListSearchResult: React.FC<Props> = ({
           <b>{listType} list</b> of{" "}
           <span className="blip-text">{linksNumber} blips</span>
         </div>
-        <img src ={checkicon} className="selected-list-check-icon"/>
+        <img src ={checkicon} className="selected-list-check-icon" alt="Check icon"/>
       </div>
     </div>
   );

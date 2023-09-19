@@ -1,7 +1,7 @@
 import http from "./http";
-import { CreateCollection, CollectionData, CollectionSearchData } from "../models/collection";
-import { LinkData } from "../models/link"
-import axios from "axios";
+import { CreateCollection, CollectionData } from "../models/collection";
+// import { LinkData } from "../models/link"
+// import axios from "axios";
 
 const createCollection = (collectionDTO: CreateCollection) => {
   // console.log(collectionDTO);

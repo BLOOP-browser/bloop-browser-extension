@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Login from './Pages/Login-page/login';
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
+// import Login from './Pages/Login-page/login';
 
-import AddLinkPage from './Pages/Add-link-page/add-link';
-import AddToListPage from './Pages/Add-to-list-page/add-to-list';
-import AddListPage from './Pages/Add-list-page/add-list-page';
+// import AddLinkPage from './Pages/Add-link-page/add-link';
+// import AddToListPage from './Pages/Add-to-list-page/add-to-list';
+// import AddListPage from './Pages/Add-list-page/add-list-page';
 
 ReactDOM.render(
   <React.StrictMode>
