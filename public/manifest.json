@@ -1,7 +1,7 @@
 {
-  "name": "BLOOP Search Companion",
-  "description": "Save to BLOOP with this extension",
-  "version": "0.0.2",
+  "name": "BLOOP",
+  "description": "Discover the web from the eyes of someone new",
+  "version": "0.0.1",
   "manifest_version": 3,
   "icons": {
     "16": "logo192.png",
