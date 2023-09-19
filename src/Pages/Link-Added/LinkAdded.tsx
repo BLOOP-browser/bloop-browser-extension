@@ -20,7 +20,7 @@ const LinkAdded: React.FC<ILInkAddedProps> = ({ onLinkAdded }) => {
           {/* <button className = "loginbutton" type="submit" onClick={handleSubmit}>Add new Link</button> */}
         </div>
       </div>
-      <div className="tinysubtitle">BLOOP Beta Release 2023</div>
+      <div className="tinysubtitle">BLOOP Private Beta 2023</div>
     </div>
   );
 };
