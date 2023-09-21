@@ -85,7 +85,7 @@ function App() {
     setCurrentURL("");
     setUrlDescription("");
     setCollectionId(null);
-
+    localStorage.removeItem('urlDescription'); 
     setView(View.LinkAdded);
   }
 

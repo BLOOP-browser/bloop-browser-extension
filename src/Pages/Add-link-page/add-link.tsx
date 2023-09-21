@@ -46,6 +46,10 @@ export function AddLinkPage(props: InitialProps) {
       .catch((error) => {
         console.error(error);
       });
+      const savedDescription = localStorage.getItem('urlDescription');
+      if (savedDescription) {
+        setUrlDescription(savedDescription);
+      }
   }, []);
 
   //   useEffect(() => {
@@ -62,6 +66,12 @@ export function AddLinkPage(props: InitialProps) {
   function handleSubmit() {
     // console.log("addLink");
     props.handleAddLink(currentUrl, urlDescription);
+  }
+
+  function handleDescriptionChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    const value = event.target.value;
+    setUrlDescription(value);
+    localStorage.setItem('urlDescription', value);
   }
 
   return (
@@ -84,7 +94,7 @@ export function AddLinkPage(props: InitialProps) {
             className="paragraph-linkdescription"
             placeholder="Note something down for later."
             value={urlDescription}
-            onChange={(event) => setUrlDescription(event.target.value)}
+            onChange={handleDescriptionChange}
             required
           />
           {/* {linkImage && <img src={linkImage} alt="Link Preview" />} */}
