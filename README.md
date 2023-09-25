@@ -20,4 +20,4 @@ yarn run build
 
 5. Select `Load unpacked extension` and open the `build` folder.
 
-> To test the latest updates of the extension, download the `build.zip` asset file from the [releases](https://github.com/BLOOP-browser/bloop-beta-chrome-ext/releases).
+> To test the latest updates of the extension, download the `extension.zip` asset file from the [releases](https://github.com/BLOOP-browser/bloop-beta-chrome-ext/releases).
