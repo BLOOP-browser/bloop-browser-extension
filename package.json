@@ -1,6 +1,6 @@
 {
   "name": "bloop",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
