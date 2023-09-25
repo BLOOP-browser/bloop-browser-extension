@@ -6,11 +6,11 @@ interface Props {
   url: string;
   image: string;
   title: string;
-  description: string;
+  mainDescription: string;
   createAt: string;
 }
 
-const LinkSearch: React.FC<Props> = ({ url, image, title, description, createAt }) => {
+const LinkSearch: React.FC<Props> = ({ url, image, title, mainDescription, createAt }) => {
 
   // Truncate function to trim and append ".."
   const truncate = (text: string, limit: number) => {
@@ -19,7 +19,7 @@ const LinkSearch: React.FC<Props> = ({ url, image, title, description, createAt 
 
   // Use truncate function for title and description
   const truncatedTitle = truncate(title, 27);
-  const truncatedDescription = truncate(description, 70);
+  const truncatedDescription = truncate(mainDescription, 70);
 
   // Convert createAt string to Date object
   const createdAtDate = new Date(createAt);

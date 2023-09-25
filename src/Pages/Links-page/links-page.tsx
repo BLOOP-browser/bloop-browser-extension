@@ -76,7 +76,7 @@ export function LinksPage(props: Props) {
             url={link.url}
             image={link.image || ""}
             title={link.title || ""}
-            description={link.description || ""}
+            mainDescription={link.mainDescription || ""}
             createAt={link.createAt || ""}
           />
         ))
