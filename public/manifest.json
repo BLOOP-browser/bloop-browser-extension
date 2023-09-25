@@ -1,7 +1,7 @@
 {
-  "name": "BLOOP (Private Beta)",
+  "name": "BLOOP (Public Beta)",
   "description": "Discover the web with new eyes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 3,
   "icons": {
     "16": "logo192.png",
