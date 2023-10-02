@@ -1,4 +1,4 @@
-# Bloop Browser Extension - Beta
+# BLOOP Browser Extension - Beta
 
 🍀 Cross paths with likeminded people online! 🍀
 
