@@ -4,7 +4,7 @@
 
 BLOOP is the open source combo of 🔍 Search and  👯🏼 Social. Compatible with chromium browsers (Mozilla, Google Chrome, Arc). You can find it in the chrome store <a href="https://chrome.google.com/webstore/detail/bloop-private-beta/pgfjbdohpdpfpibaphaeipipfkpaojpa">here</a>.
 
-2 things to know about BLOOP:
+**2 things to know about BLOOP:**
 1. The more you bookmark (save), the more easily you can meet other people who like the same stuff
 2. The more people you connect with (frens), the better your Search will be. Your BLOOP search will take in the combined saves of you and your frens
 
@@ -18,7 +18,7 @@ BLOOP is the open source combo of 🔍 Search and  👯🏼 Social. Compatible w
 
 
 
-You can also find regular updates on BLOOP here:
+**You can also find regular updates on BLOOP here:**
 https://www.youtube.com/@joy-getbloop
 
 
