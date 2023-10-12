@@ -47,3 +47,11 @@ yarn run build
 5. Select `Load unpacked extension` and open the `build` folder.
 
 > To test the latest updates of the extension, download the `extension.zip` asset file from the [releases](https://github.com/BLOOP-browser/bloop-beta-chrome-ext/releases).
+
+## Thank you to all our contributors! ❤️
+
+<a href="https://github.com/bloop-browser/bloop-browser-extension/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bloop-browser/bloop-browser-extension"/>
+</a>  <br>
+
+Please give a star ⭐ if you'd like more people to discover BLOOP.
