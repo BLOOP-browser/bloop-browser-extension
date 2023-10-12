@@ -1,3 +1,6 @@
+![long-1](https://github.com/BLOOP-browser/bloop-browser-extension/assets/36482777/0de2bbf5-45b0-467c-881b-833d8e30ed30)
+
+
 # BLOOP Browser Extension - Beta
 
 🍀 Cross paths with likeminded people online! 🍀
