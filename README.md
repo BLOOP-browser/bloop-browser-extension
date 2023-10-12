@@ -52,6 +52,10 @@ yarn run build
 
 <a href="https://github.com/bloop-browser/bloop-browser-extension/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=bloop-browser/bloop-browser-extension"/>
-</a>  <br>
+</a>  
+<br/>
+<br/>
+
+Your help means a lot to us! 
 
 Please give a star ⭐ if you'd like more people to discover BLOOP.
