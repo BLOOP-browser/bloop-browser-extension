@@ -28,6 +28,8 @@ https://www.youtube.com/@joy-getbloop
 
 ## Development
 
+Note: in order to test the code with the working backend, please message `hi[at]getbloop[dot]co` with your email and the title "BLOOP beta - backend." You may need an Android phone for this. Thank you!
+
 1. Install dependencies.
 
 ```bash
